@@ -1,7 +1,7 @@
 // =================FUNCTIONAL COMPONENT=================
 // export default function App() {
 //     return (
-//         <h1>functional component</h1>
+//         <h1>Functional component</h1>
 //     )
 // }
 
@@ -13,7 +13,7 @@
 // export default class App extends Component {
 //     render() {
 //         return (
-//             <h1>This is  class component</h1>
+//             <h1>Class component</h1>
 //         )
 //     }
 // }
@@ -22,7 +22,11 @@
 // =================PROPS WITH FUNCTIONAL COMPONENT =================
 // export default function App(prop) {
 //     return (
-//         <h1>{prop.firstname}</h1>
+//         <div>
+//             <h1>Props with Functional component</h1> // props is used for dynamic data 
+//             <h1>{prop.firstname} {prop.lastname} </h1>
+//         </div>
+
 //     )
 // }
 
@@ -32,11 +36,13 @@
 // export default class App extends Component {
 //     render() {
 //         return (
-//             <h1>{this.props.firstname}</h1>
+//             <div>
+//                 <h1>Props with class component</h1>
+//                 <h1>{this.props.firstname}</h1>
+//             </div>
 //         )
 //     }
 // }
-
 
 
 // =================useState WITH FUNCTIONAL COMPONENT================= 
@@ -44,7 +50,7 @@
 
 // export default function App(prop) {
 
-//     const [name, setName] = useState(prop.firstname);
+//     const [name, setName] = useState(prop.firstname);// UseState is used for rerendring component
 
 //     function chanegeName() {
 //         setName('Sheikh');
@@ -53,6 +59,7 @@
 //     console.log(name);
 //     return (
 //         <div>
+//             <h1>useState with functional component</h1>
 //             <h1>{name}</h1>
 //             <button onClick={chanegeName}>Click</button>
 //         </div>
@@ -75,14 +82,13 @@
 //     render() {
 //         return (
 //             <div>
-//                 <h2>useState with class component</h2>
-//                 <p>{this.state.name}</p>
+//                 <h1>useState with class component</h1>
+//                 <h1>{this.state.name}</h1>
 //                 <button>Click</button>
 //             </div>
 //         );
 //     }
 // }
-
 
 
 // =================get input data =================
@@ -91,7 +97,7 @@
 //     const [data, setData] = useState();
 
 //     return (
-//         <div><h2>Get data</h2>
+//         <div><h2>Get data input data while typing</h2>
 //             <p>{data}</p>
 //             <input type="text" name="" id="" onChange={(e) => (setData(e.target.value))} />
 //         </div>
@@ -113,6 +119,7 @@ function App() {
             <div className=''>
                 <button onClick={() => setStatus(0)}>Hide</button>
                 <button className='' onClick={() => setStatus(1)}>show</button>
+                <button className='' onClick={() => setStatus(!status)}>Toggle</button>
             </div>
         </div>
     )
